@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net",
+    "AzureWebJobsSendGridApiKey": "SG...",
+    "Function:BasePath": "http://localhost:7071/",
+    "Blob:StorageConnection": "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net",
+    "Blob:StorageBasePath": "https://...blob.core.windows.net/",
+    "SendGrid:From": "...@...com.au",
+    "SendGrid:To": "...@...com.au",
+    "SendGrid:SubjectTemplate": "A new cat model '{0}' submission has been received from {1}!",
+    "SendGrid:ApprovalEmailTemplate": "<style type=\"text/css\">.t {{border-collapse:collapse;border-spacing:0;border:none;}}.t td{{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}}body {{ font-family: Arial, Helvetica, sans-serif;}}</style>Do you think <strong>{0}</strong> from <strong>{1}</strong> deserves to be part of the agency? <br/><br/><img src=\"{2}\"><br/><br/><table class=\"t\"> <tr> <td width=\"100px\" align=\"center\" bgcolor=\"#34cdf9\"><a href=\"{4}approval?name={0}&instanceId={3}&response=approved\">Approve</a></td><td width=\"100px\" align=\"center\" bgcolor=\"#9b9b9b\"><a href=\"{4}approval?name={0}&instanceId={3}&response=rejected\">Reject</a></td></tr></table>",
+    "Workflow:Timeout": "5",
+    "Workflow:MeansOfApproval": "Email",
+    "Slack:ApprovalUrl": "https://hooks.slack.com/services/...",
+    "Slack:ApprovalMessageTemplate": "{{\"text\":\"A new request from *{3}* has been received. {0}\",\"attachments\":[{{\"text\":\"Does *{4}* deserve to join this exclusive agency?\",\"fallback\":\"You are unable to choose an activity\",\"callback_id\":\"{1}#{2}#{3}#{4}\",\"color\":\"#3AA3E3\",\"attachment_type\":\"default\",\"actions\":[{{\"name\":\"approve\",\"text\":\"Approve\",\"type\":\"button\",\"value\":\"Approve\"}},{{\"name\":\"approve\",\"text\":\"Reject\",\"type\":\"button\",\"value\":\"Reject\"}}]}}]}}"
+  }
+}

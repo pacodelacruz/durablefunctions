@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/VSSample/v15
+/src/.vs/PacodelaCruz.DurableFunctions/v15/Server/sqlite3
+/src/PacodelaCruz.DurableFunctions.Standard/bin/Debug/netstandard2.0
+/src/PacodelaCruz.DurableFunctions.Standard/obj
+/tests/bin/Debug/net461
+/src/PacodelaCruz.DurableFunctions.Approval/bin
+/src/PacodelaCruz.DurableFunctions.Approval/obj
+/src/PacodelaCruz.DurableFunctions.Approval/Properties/PublishProfiles
+/src/PacodelaCruz.DurableFunctions.Approval/Properties
+/src/PacodelaCruz.DurableFunctions.Approval/local.settings.json
+/src/PacodelaCruz.DurableFunctions.Approval/Notes.txt
+/.vs/durablefunctions/v15
+/src/.vs/PacodelaCruz.DurableFunctions/v15
+/src/.vs/config
+/.vs
