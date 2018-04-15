@@ -11,7 +11,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Newtonsoft.Json;
 
-namespace PacodelaCruz.DurableFunctions.Standard
+namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class ProcessHttpGetApprovals
     {

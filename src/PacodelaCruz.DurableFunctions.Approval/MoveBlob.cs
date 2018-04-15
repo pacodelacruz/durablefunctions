@@ -8,7 +8,7 @@ using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 using PacodelaCruz.DurableFunctions.Models;
 
-namespace PacodelaCruz.DurableFunctions
+namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class MoveBlob
     {

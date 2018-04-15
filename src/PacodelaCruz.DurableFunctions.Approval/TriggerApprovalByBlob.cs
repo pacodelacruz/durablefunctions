@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using PacodelaCruz.DurableFunctions.Models;
 
-namespace PacodelaCruz.DurableFunctions
+namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class TriggerApprovalByBlob
     {

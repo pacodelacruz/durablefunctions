@@ -10,7 +10,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Auth;
 using PacodelaCruz.DurableFunctions.Models;
 
-namespace PacodelaCruz.DurableFunctions
+namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class SendApprovalRequestViaSlack
     {

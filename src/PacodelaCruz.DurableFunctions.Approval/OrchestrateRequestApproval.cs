@@ -13,7 +13,7 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using PacodelaCruz.DurableFunctions.Models;
 
-namespace PacodelaCruz.DurableFunctions
+namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class RequestApprovalOrchestration
     {
