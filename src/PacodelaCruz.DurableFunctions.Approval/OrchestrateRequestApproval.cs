@@ -9,8 +9,6 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using System.Threading;
-using SendGrid;
-using SendGrid.Helpers.Mail;
 using PacodelaCruz.DurableFunctions.Models;
 
 namespace PacodelaCruz.DurableFunctions.Approval

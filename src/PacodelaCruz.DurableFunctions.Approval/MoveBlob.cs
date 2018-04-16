@@ -12,6 +12,11 @@ namespace PacodelaCruz.DurableFunctions.Approval
 {
     public static class MoveBlob
     {
+        /// <summary>
+        /// Moves a Blob from one container to other based on metadata
+        /// </summary>
+        /// <param name="responseMetadata"></param>
+        /// <param name="log"></param>
         [FunctionName("MoveBlob")]
         public static void Run([ActivityTrigger] ApprovalResponseMetadata responseMetadata, TraceWriter log)
         {
