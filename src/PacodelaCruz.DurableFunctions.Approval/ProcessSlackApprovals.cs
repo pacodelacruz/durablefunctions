@@ -13,7 +13,10 @@ namespace PacodelaCruz.DurableFunctions.Approval
     public static class ProcessSlackApprovals
     {
         /// <summary>
-        /// Routes all Slack Interactive Button Responses to the corresponding handler
+        /// Processes Slack Interactive Message Responses.
+        /// Responses are received as 'application/x-www-form-urlencoded'
+        /// Routes the response to the corresponding Durable Function orchestration instance 
+        /// More information at https://api.slack.com/docs/message-buttons
         /// I'm using AuthorizationLevel.Anonymous just for demostration purposes, but you most probably want to authenticate and authorise the call. 
         /// </summary>
         /// <param name="req"></param>
@@ -41,18 +44,18 @@ namespace PacodelaCruz.DurableFunctions.Approval
             if (status.RuntimeStatus == OrchestrationRuntimeStatus.Running || status.RuntimeStatus == OrchestrationRuntimeStatus.Pending)
             {
                 string selection = response.actions[0].value;
-                string catEmoji = "";
+                string emoji = "";
                 if (selection == "Approve")
                 {
                     isApproved = true;
-                    catEmoji = ":heart_eyes_cat:";
+                    emoji = ":rabbit:";
                 }
                 else
                 {
-                    catEmoji = ":smirk_cat:";
+                    emoji = ":rabbit2:";
                 }
                 await orchestrationClient.RaiseEventAsync(instanceId, "ReceiveApprovalResponse", isApproved);
-                return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent($"Thanks for your selection! Your selection for *'{name}'* was *'{selection}'* {catEmoji}") };
+                return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent($"Thanks for your selection! Your selection for *'{name}'* was *'{selection}'* {emoji}") };
             }
             else
             {

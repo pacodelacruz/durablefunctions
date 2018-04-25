@@ -17,6 +17,7 @@ namespace PacodelaCruz.DurableFunctions.Approval
         /// <summary>
         /// Activity Function. 
         /// Sends an Approval Request to a Slack App using an interactive button template. 
+        /// More information at https://api.slack.com/docs/message-buttons
         /// </summary>
         /// <param name="requestMetadata"></param>
         /// <returns></returns>
@@ -39,7 +40,7 @@ namespace PacodelaCruz.DurableFunctions.Approval
                     throw new HttpRequestException(resultContent);
                 }
             }
-            log.Info($"Message about {requestMetadata.Subject} sent to Slack!");
+            log.Info($"Message regarding {requestMetadata.Subject} sent to Slack!");
             return resultContent;
         }
     }

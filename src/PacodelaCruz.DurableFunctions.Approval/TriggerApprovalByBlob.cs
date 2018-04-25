@@ -41,7 +41,7 @@ namespace PacodelaCruz.DurableFunctions.Approval
 
             ApprovalRequestMetadata requestMetadata = new ApprovalRequestMetadata()
             {
-                ApprovalType = "Cat",
+                ApprovalType = "FurryModel",
                 ReferenceUrl = $"{blobStorageBasePath}requests/{name}",
                 Subject = subject,
                 Requestor = requestor
